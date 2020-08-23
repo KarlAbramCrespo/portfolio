@@ -1,0 +1,36 @@
+.absolute {
+    position: absolute;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hidden {
+    opacity: 0;
+}
+
+.coverpage {
+    height: 100%;
+    width: 100%;
+}
+
+#coverScreen {
+    background-color: #0c2752;
+    color: #ffffff;
+}
+
+#coverScreen .title {
+    font-family: "Abril Fatface", sans-serif;
+    flex-direction: column;
+    font-size: 500%;
+    line-height: 0.8em;
+}
+
+#coverScreen .title div:nth-child(2) {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 35%;
+}
