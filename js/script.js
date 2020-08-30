@@ -3,7 +3,7 @@ var loadCtr = 0;
 var loadInterval;
 
 function init() {
-    if(checkMobile){
+    if(checkMobile()){
         main.classList.add("mobile");
     }
     loadFonts();
