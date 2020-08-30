@@ -41,6 +41,11 @@
 
 #mainMenu {
     height: 100%;
+    max-width: 90%;
+}
+
+.mobile #mainMenu {
+    height: 80%;
 }
 
 #mainMenuDesk {
