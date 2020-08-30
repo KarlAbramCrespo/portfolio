@@ -28,8 +28,7 @@ function checkLoad() {
 }
 
 function start() {
-    console.log("Here we go!")
-    
+    console.log("Here we go!");
     animate();
 }
 

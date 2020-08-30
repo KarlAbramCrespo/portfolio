@@ -2,6 +2,10 @@
     position: absolute;
 }
 
+.relative {
+    position: relative;
+}
+
 .flex {
     display: flex;
     align-items: center;
@@ -34,3 +38,35 @@
     font-weight: 400;
     font-size: 35%;
 }
+
+#mainMenu {
+    height: 100%;
+}
+
+#mainMenuDesk {
+    width: auto;
+    height: 30%;
+    top: 60%;
+}
+
+#mainMenuComputer {
+    width: auto;
+    height: 22%;
+    top: 38%;
+    transform: translateX(70%);
+}
+
+#mainMenuDecoration {
+    width: auto;
+    height: 14%;
+    top: 46%;
+    transform: translateX(10%);
+}
+
+#mainMenuDiploma {
+    width: auto;
+    height: 12%;
+    top: 10%;
+    transform: translateX(130%);
+}
+
