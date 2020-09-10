@@ -5,6 +5,7 @@
     <meta charset="utf-8">
 
     <title>Karl's Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Karl's Online Portfolio">
     <meta name="author" content="Karl Abram Crespo">
 
@@ -14,27 +15,68 @@
 </head>
 
 <body onload="init()">
-    <div id = "main" class="hidden">
-        <div id = "mainMenuCont" class = "absolute coverpage flex">
-            <div id = "mainMenu" class="relative">
+    <div id="main" class="hidden">
+        <div id="mainMenuCont" class="absolute coverpage flex">
+            <div id="mainMenu" class="relative">
                 <img id="mainMenuComputer" src="images/main_menu/Computer.svg" class="absolute" alt="main menu computer">
-                <img id="mainMenuDecoration"src="images/main_menu/Decoration.svg" class="absolute" alt="main menu decoration">
-                <img id="mainMenuDiploma"src="images/main_menu/Diploma.svg" class="absolute" alt="main menu diploma">
+                <img id="mainMenuDecoration" src="images/main_menu/Decoration.svg" class="absolute" alt="main menu decoration">
+                <img id="mainMenuDiploma" src="images/main_menu/Diploma.svg" class="absolute" alt="main menu diploma">
                 <img id="mainMenuDesk" src="images/main_menu/Desk.svg" class="relative" alt="main menu desk">
             </div>
         </div>
-        <div id="coverScreen" class = "absolute coverpage">
-            <div class = "title coverpage flex">
+        <div id="coverScreen" class="absolute coverpage">
+            <div class="title coverpage flex">
                 <div>Hi, I'm Karl!</div>
                 <div>Welcome to my online portfolio.</div>
             </div>
         </div>
+        <div id="skillsPageCont" class="absolute coverpage subpage">
+            <div class="closeBtn absolute">Return to main menu</div>
+            <div id="skillsHolder" class = "">
+                <div id="skillsListCont">
+                    <div class="tierRow">
+                        <div class="headerCont">
+                            <div class="header">S</div>
+                        </div>
+                    </div>
+                    <div class="tierRow">
+                        <div class="headerCont">
+                            <div class="header">A</div>
+                        </div>
+                    </div>
+                    <div class="tierRow">
+                        <div class="headerCont">
+                            <div class="header">B</div>
+                        </div>
+                    </div>
+                    <div class="tierRow">
+                        <div class="headerCont">
+                            <div class="header">C</div>
+                        </div>
+                    </div>
+                    <div class="tierRow">
+                        <div class="headerCont">
+                            <div class="header">D</div>
+                        </div>
+                    </div>
+                </div>
+                <div id="skillsDescCont">
+                    <div class="title">
+                        Let's get started!
+                    </div>
+                    <div class = "description">
+                        The chart showcases the tools and programs that I have experience in using. It is sorted from most experienced (S) to least experienced (D). Tap on an icon for an in-depth explanation of my experience with it!
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    
-    
+
+
     <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.0/gsap.min.js"></script>
     <script src="js/script.js"></script>
+    <script src="js/skillsList.js"></script>
 </body>
 
 </html>

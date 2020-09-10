@@ -1,3 +1,7 @@
+body {
+    overflow: hidden;
+}
+
 .absolute {
     position: absolute;
 }
@@ -21,6 +25,15 @@
     width: 100%;
 }
 
+.subpage {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+}
+
+#main {
+    overflow: hidden;
+}
+
 #coverScreen {
     background-color: #0c2752;
     color: #ffffff;
@@ -39,6 +52,11 @@
     font-size: 35%;
 }
 
+#skillsPageCont {
+    background-color: #333333;
+    color: #ffffff;
+}
+
 #mainMenu {
     height: 100%;
     max-width: 90%;
@@ -46,6 +64,10 @@
 
 .mobile #mainMenu {
     height: 80%;
+}
+
+#mainMenu > img {
+    cursor: pointer;
 }
 
 #mainMenuDesk {
@@ -75,3 +97,92 @@
     transform: translateX(130%);
 }
 
+.closeBtn {
+    padding: 10px;
+}
+
+#skillsHolder {
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    flex-grow: 1;
+    position: relative;
+    top: 50px;
+}
+
+#skillsListCont {
+    top: 30px;
+    max-width: 100%;
+}
+
+#skillsListCont .tierRow {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+
+#skillsListCont .tierRow > * {
+    display: inline-block;
+    max-height: 60px;
+}
+
+#skillsListCont .tierRow .headerCont {
+    font-weight: 800;
+    font-size: 20px;
+    min-width: 60px;
+    height: 60px;
+    text-align: center;
+    background-color: red;
+}
+
+#skillsListCont .tierRow .headerCont .header {
+    line-height: 58px;
+}
+
+#skillsListCont .tierRow img {
+    max-width: 60px;
+    max-height: 60px;
+}
+
+#skillsListCont .tierRow .imageCont {
+    max-width: 60px;
+    height: 60px;
+    padding: 0 10px;
+    cursor: pointer;
+    transition: 0.3s transform;
+}
+
+#skillsListCont .tierRow .imageCont:hover {
+    transform: scale(1.1);
+}
+
+#skillsDescCont {
+    background-color: #666666;
+    width: 250px;
+    height: auto;
+    padding: 25px;
+
+}
+
+#skillsDescCont .title {
+    font-size: 150%;
+    font-weight: 800;
+}
+
+#skillsDescCont .description {
+    margin-top: 20px;
+    line-height: 1.2;
+}
+
+@media only screen and (max-width: 800px) {
+    #skillsHolder {
+        flex-direction: column;
+        padding: 5%;
+    }
+
+    #skillsDescCont {
+        min-width: auto;
+        width: 90%;
+        margin-top: 20px;
+    }
+}
