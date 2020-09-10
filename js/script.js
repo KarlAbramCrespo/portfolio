@@ -49,8 +49,8 @@ function setupPages() {
     gsap.set(skillsPageCont, {
         y: "100%"
     });
-    
-    
+
+
     initSkillsPage();
 }
 
@@ -62,12 +62,12 @@ function animate() {
     })
 
     tl.to(coverScreen, 0.5, {
-//        delay: 2,
+        //        delay: 2,
         y: "-100%"
     })
 }
 
-function initSkillsPage(){
+function initSkillsPage() {
     appendToTier("ms_word_logo", "S", "images/logos/ms_word_logo.png");
     appendToTier("ms_powerpoint_logo", "S", "images/logos/ms_powerpoint_logo.png");
     appendToTier("html_logo", "A", "images/logos/html_logo.png");
@@ -82,15 +82,15 @@ function initSkillsPage(){
     appendToTier("androidstudio_logo", "D", "images/logos/androidstudio_logo.png");
 }
 
-function appendToTier(elemName, tier, image){
+function appendToTier(elemName, tier, image) {
     var imageTempCont = document.createElement("div");
     imageTempCont.classList.add("imageCont");
     imageTempCont.name = elemName;
     var imageTemp = document.createElement("img");
     imageTemp.src = image;
     imageTempCont.appendChild(imageTemp);
-    
-    switch(tier) {
+
+    switch (tier) {
         case "S":
             document.querySelectorAll("#skillsListCont .tierRow")[0].appendChild(imageTempCont);
             break;
@@ -108,18 +108,18 @@ function appendToTier(elemName, tier, image){
             document.querySelectorAll("#skillsListCont .tierRow")[4].appendChild(imageTempCont);
             break;
     }
-    
+
     var nameTemp, descTemp;
-    
-    for(i = 0; i < skills.length; i++){
-        if(skills[i].id === elemName){
+
+    for (i = 0; i < skills.length; i++) {
+        if (skills[i].id === elemName) {
             nameTemp = skills[i].name;
             descTemp = skills[i].description;
             break;
         }
     }
-    
-    imageTempCont.addEventListener("click", function(){
+
+    imageTempCont.addEventListener("click", function () {
         document.querySelectorAll("#skillsDescCont .title")[0].innerHTML = nameTemp;
         document.querySelectorAll("#skillsDescCont .description")[0].innerHTML = descTemp;
     });
@@ -127,7 +127,13 @@ function appendToTier(elemName, tier, image){
 
 function showPage(elem) {
     gsap.to(elem, {
-        y: 0 
+        y: 0
+    });
+}
+
+function hidePage(elem) {
+    gsap.to(elem, {
+        y: "100%"
     });
 }
 
@@ -139,3 +145,7 @@ function checkMobile() {
         return false;
     }
 }
+
+document.querySelectorAll("#skillsPageCont .closeBtn")[0].addEventListener("click", function () {
+    hidePage(skillsPageCont);
+});
